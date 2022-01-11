@@ -9,6 +9,7 @@ import qualified Day5 (solve)
 import qualified Day6 (solve)
 import qualified Day7 (solve)
 import qualified Day8 (solve)
+import qualified Day9 (solve)
 import System.Environment (getArgs)
 
 main :: IO ()
