@@ -2,8 +2,11 @@ module Common
   ( charToInt,
     getInputFilename,
     formatOutput,
+    debug
   )
 where
+
+import Debug.Trace (trace)
 
 charToInt :: Char -> Int
 charToInt c = case c of
@@ -26,3 +29,6 @@ formatOutput :: (Show a, Show b) => (Int, a, b) -> IO ()
 formatOutput (day, part1, part2) = do
   print $ "Day " ++ show day ++ " part 1: " ++ show part1
   print $ "Day " ++ show day ++ " part 2: " ++ show part2
+
+debug :: (Show a) => String -> a -> a
+debug log a = trace (log ++ " " ++ show a) a
